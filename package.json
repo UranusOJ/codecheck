@@ -1,0 +1,11 @@
+{
+  "name": "codecheck",
+  "version": "1.0.0",
+  "description": "代码查重工具",
+  "main": "index.ts",
+  "author": "KV熵",
+  "license": "MIT",
+  "devDependencies": {
+    "hydrooj": "^5.0.0-beta.15"
+  }
+}
