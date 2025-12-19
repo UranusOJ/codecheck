@@ -1,0 +1,49 @@
+{% set page_name = "代码相似度查询" %}
+{% extends "layout/basic.html" %}
+{% block content %}
+<div class="row">
+  <div class="medium-9 columns">
+    <div class="section">
+      <div class="section__body">
+          <p style="margin:1rem">此页面只会展示 AC 提交的代码相似度，按相似度的降序排列</p>
+
+          {% if not com.length %}
+          {{ nothing.render('没有提交') }}
+          {% else %}
+          <table class="data-table">
+            <colgroup>
+              <col class="col--user">
+              <col class="col--record">
+              <col class="col--user">
+              <col class="col--record">
+              <col class="col--xiangsidu">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="col--user">用户A</th>
+                <th class="col--record">提交A</th>
+                <th class="col--user">用户B</th>
+                <th class="col--record">提交B</th>
+                <th class="col--xiangsidu">相似度</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for i in com -%}
+              <tr>
+                <td class="col--user">{{ user.render_inline(i.ua) }}</td>
+                <td class="col--record"><a href="/record/{{ i.a._id }}" target="_blank">{{ i.a._id }}</a></td>
+                <td class="col--user">{{ user.render_inline(i.ub) }}</td>
+                <td class="col--record"><a href="/record/{{ i.b._id }}" target="_blank">{{ i.b._id }}</a></td>
+                <td class="col--xiangsidu">{{ i.d }}</td>
+              </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+          {{ paginator.render(page, upcount) }}	
+          {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
