@@ -5,10 +5,10 @@
   <div class="medium-9 columns">
     <div class="section">
       <div class="section__body">
-          <p style="margin:1rem">此页面只会展示 AC 提交的代码相似度，按相似度的降序排列。如果提交数量小于2，则视为没有提交</p>
+          <p style="margin:1rem">{{ _('This page only displays the code similarity of AC submissions, sorted in descending order of similarity. If there are fewer than 2 submissions, it is considered as having no submissions.') }}</p>
 
           {% if not com.length %}
-          {{ nothing.render('没有提交') }}
+          {{ nothing.render(_('No submissions...')) }}
           {% else %}
           <table class="data-table">
             <colgroup>
@@ -16,15 +16,15 @@
               <col class="col--record">
               <col class="col--user">
               <col class="col--record">
-              <col class="col--xiangsidu">
+              <col class="col--similarity">
             </colgroup>
             <thead>
               <tr>
-                <th class="col--user">用户A</th>
-                <th class="col--record">提交A</th>
-                <th class="col--user">用户B</th>
-                <th class="col--record">提交B</th>
-                <th class="col--xiangsidu">相似度</th>
+                <th class="col--user">{{ _('User A')}}</th>
+                <th class="col--record">{{ _('Record A')}}</th>
+                <th class="col--user">{{ _('User B') }}</th>
+                <th class="col--record">{{ _('Record B') }}</th>
+                <th class="col--similarity">{{ _('Similarity') }}</th>
               </tr>
             </thead>
             <tbody>
@@ -34,7 +34,7 @@
                 <td class="col--record"><a href="/record/{{ i.a._id }}" target="_blank">{{ i.a._id }}</a></td>
                 <td class="col--user">{{ user.render_inline(i.ub) }}</td>
                 <td class="col--record"><a href="/record/{{ i.b._id }}" target="_blank">{{ i.b._id }}</a></td>
-                <td class="col--xiangsidu">{{ i.d }}</td>
+                <td class="col--similarity">{{ i.d }}</td>
               </tr>
               {%- endfor -%}
             </tbody>

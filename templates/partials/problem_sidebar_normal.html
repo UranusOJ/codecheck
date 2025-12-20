@@ -108,8 +108,8 @@
       {% if handler.user.hasPerm(perm.PERM_CREATE_PROBLEM) %}
         <li class="menu__seperator nojs--hide"></li>
         <li class="menu__item nojs--hide">
-          <a class="menu__link" href="../code-check/{{ pdoc.docId }}">
-            <span class="icon icon-settings"></span>代码相似度查询
+          <a class="menu__link" href="{{ url('code_check', pid=pdoc.docId) }}">
+            <span class="icon icon-settings"></span> {{ _('Run code similarity check') }}
           </a>
         </li>
       {% endif %}

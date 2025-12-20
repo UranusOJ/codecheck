@@ -1,0 +1,9 @@
+Run code similarity check: 运行代码相似度检查
+User A: 用户 1
+User B: 用户 2
+Record A: 用户 1 的提交
+Record B: 用户 2 的提交
+Similarity: 相似度
+This page only displays the code similarity of AC submissions, sorted in descending order of similarity. If there are fewer than 2 submissions, it is considered as having no submissions.: 此页面只会展示 AC 提交的代码相似度，按相似度的降序排列。如果提交数量小于2，则视为没有提交。
+No submissions...: 没有提交...
+No submissions: 没有提交
