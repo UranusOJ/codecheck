@@ -1,6 +1,6 @@
 # Code Check插件
 
-这是一个基于 [HydroOJ](https://github.com/hydro-dev/Hydro) 的代码检查插件。
+这是一个基于 [HydroOJ](https://github.com/hydro-dev/Hydro) 的代码相似度检查插件。
 
 写得有些丑，可能有一些不可名状的Bug，还请谨慎使用，如有发现Bug，可以联系我们（email: `norp@foxmail.com`）。
 
