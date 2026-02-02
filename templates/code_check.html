@@ -31,9 +31,9 @@
               {%- for i in com -%}
               <tr>
                 <td class="col--user">{{ user.render_inline(i.ua) }}</td>
-                <td class="col--record"><a href="/record/{{ i.a._id }}" target="_blank">{{ i.a._id }}</a></td>
+                <td class="col--record"><a href="../record/{{ i.a._id }}" target="_blank">{{ i.a._id }}</a></td>
                 <td class="col--user">{{ user.render_inline(i.ub) }}</td>
-                <td class="col--record"><a href="/record/{{ i.b._id }}" target="_blank">{{ i.b._id }}</a></td>
+                <td class="col--record"><a href="../record/{{ i.b._id }}" target="_blank">{{ i.b._id }}</a></td>
                 <td class="col--similarity">{{ i.d }}</td>
               </tr>
               {%- endfor -%}
